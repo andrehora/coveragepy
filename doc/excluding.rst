@@ -94,10 +94,12 @@ default "pragma: no cover" match if you still want it to apply.
 A similar pragma, "no branch", can be used to tailor branch coverage
 measurement. See :ref:`branch` for details.
 
+
 More examples
 -------------
 
 See :ref:`excluding_examples` for more examples of exclusions.
+
 
 Excluding source files
 ----------------------
