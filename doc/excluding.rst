@@ -8,12 +8,12 @@ Excluding code from coverage.py
 ===============================
 
 You may have code in your project that you know won't be executed, and you want
-to tell coverage.py to ignore it.  For example, you may have debugging-only
+to tell coverage.py to ignore it. For example, you may have debugging-only
 code that won't be executed during your unit tests. You can tell coverage.py to
 exclude this code during reporting so that it doesn't clutter your reports with
 noise about code that you don't need to hear about.
 
-Coverage.py will look for comments marking clauses for exclusion.  In this
+Coverage.py will look for comments marking clauses for exclusion. In this
 code, the "if debug" clause is excluded from reporting::
 
     a = my_function1()
@@ -22,9 +22,9 @@ code, the "if debug" clause is excluded from reporting::
         log_message(msg, a)
     b = my_function2()
 
-Any line with a comment of "pragma: no cover" is excluded.  If that line
+Any line with a comment of "pragma: no cover" is excluded. If that line
 introduces a clause, for example, an if clause, or a function or class
-definition, then the entire clause is also excluded.  Here the __repr__
+definition, then the entire clause is also excluded. Here the __repr__
 function is not reported as missing::
 
     class MyObject(object):
@@ -68,7 +68,7 @@ often-used constructs to exclude that can be matched with a regex. You can
 exclude them all at once without littering your code with exclusion pragmas.
 
 For example, you might decide that __repr__ functions are usually only used in
-debugging code, and are uninteresting to test themselves.  You could exclude
+debugging code, and are uninteresting to test themselves. You could exclude
 all of them by adding a regex to the exclusion list::
 
     [report]
@@ -92,8 +92,12 @@ are taking control of the entire list of regexes, so you need to re-specify the
 default "pragma: no cover" match if you still want it to apply.
 
 A similar pragma, "no branch", can be used to tailor branch coverage
-measurement.  See :ref:`branch` for details.
+measurement. See :ref:`branch` for details.
 
+More examples
+-------------
+
+See :ref:`excluding_examples` for more examples of exclusions.
 
 Excluding source files
 ----------------------
